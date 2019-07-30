@@ -23,6 +23,7 @@ typedef struct  s_ar
 	struct s_ar *next;
 }               t_ar;
 
+void    print_clr_lst(t_ar *a, t_ar *b);
 int     go_back(t_ar *a, int median);
 int     sorted_part(t_ar *a);
 void    sort_push(t_ar **a, t_ar **b);

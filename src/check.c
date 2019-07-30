@@ -9,10 +9,7 @@ int     sort_check(t_ar *a)
 	while (a)
 	{
 		if (a->num < n)
-		{
-			printf("%d %d\n", a->num, n);
 			return (0);
-		}
 		n = a->num;
 		a = a->next;
 	}
@@ -33,6 +30,7 @@ void    check(int argc, char **argv)
 		operation_choose(&a, &b, line);
 		ft_strdel(&line);
 		//print_list(a, b);
+		//print_clr_lst(a, b);
 	}
 	//print_list(a, b);
 	if (b == NULL && sort_check(a) == 1)

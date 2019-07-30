@@ -33,7 +33,7 @@ static char					*ft_strrev(char *str)
 	return (str);
 }
 
-void						ft_putnbr(int n)
+void ft_putnbr(int n)
 {
 	unsigned long int	num;
 	int					i;

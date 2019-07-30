@@ -1,4 +1,4 @@
-# Install script for directory: /home/humanbean/ecole42/Push_swap
+# Install script for directory: /home/humanbean/ecole42/push_swap_v_2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/humanbean/ecole42/Push_swap/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

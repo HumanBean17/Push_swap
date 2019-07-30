@@ -4,11 +4,9 @@ int    num_check(char *line)
 {
 	long int num;
 
-	if (line[0] == '-')
-		if (line[1] != '0' && (num = ft_atoi(line)) == 0)
+	if (line[0] == '-' && line[1] != '0' && (num = ft_atoi(line)) == 0)
 			print_exit(0);
-	else
-		if (line[0] != '0' && (num = ft_atoi(line)) == 0)
+	else if (line[0] != '0' && (num = ft_atoi(line)) == 0)
 			print_exit(0);
 	num = ft_atoi(line);
 	return ((int)num);

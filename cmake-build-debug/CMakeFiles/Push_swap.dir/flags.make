@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/humanbean/ecole42/Push_swap/includes -I/home/humanbean/ecole42/Push_swap/libft 
+C_INCLUDES = -I/home/humanbean/ecole42/push_swap_v_2/includes -I/home/humanbean/ecole42/push_swap_v_2/libft 
 

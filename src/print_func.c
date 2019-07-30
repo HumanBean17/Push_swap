@@ -35,6 +35,23 @@ void    print_parts(t_ar *a, t_ar *b)
 	printf("-------------------------\n");
 }
 
+int     part_check(t_ar *a)
+{
+	int index;
+	int i;
+
+	i = 0;
+	index = 0;
+	while (a)
+	{
+		if (a->pos == 1)
+			index = i;
+		a = a->next;
+		i++;
+	}
+	return (index);
+}
+
 void print_list(t_ar *a, t_ar *b)
 {
 	printf("-------------------------\n");
@@ -53,5 +70,5 @@ void print_list(t_ar *a, t_ar *b)
 		if (a)
 			a = a->next;
 	}
-	printf("-------------------------\n");
+	printf("\n");
 }

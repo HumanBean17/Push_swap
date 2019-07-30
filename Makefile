@@ -10,6 +10,10 @@ PUSH_SWAP_NAME = push_swap
 
 HDR = includes/
 
+PRINTF = libftprintf/
+
+PRINTF_A = libftprintf/libftprintf.a
+
 LIBFT = libft/
 
 LIBFT_A = libft/libft.a
@@ -23,7 +27,6 @@ $(CHECKER_NAME):
 	$(CC) $(CHECKER_SRC) $(COMMON_SRC) -I $(HDR) -o $(CHECKER_NAME) -L. $(LIBFT_A)
 
 $(PUSH_SWAP_NAME):
-	make -C $(LIBFT)
 	$(CC) $(PUSH_SWAP_SRC) $(COMMON_SRC) -I $(HDR) -o $(PUSH_SWAP_NAME) -L. $(LIBFT_A)
 
 clean:
@@ -32,6 +35,6 @@ clean:
 fclean:
 	rm -f $(CHECKER_NAME)
 	rm -f $(PUSH_SWAP_NAME)
-	make -C $(LIBFT)
+	make -C $(LIBFT) fclean
 
 re: fclean all
