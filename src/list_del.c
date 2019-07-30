@@ -28,3 +28,12 @@ void	delone(t_ar **begin, t_ar *to_del)
 		free(cp);
 	}
 }
+
+int     iminlovewithnormes(int *ar, int len)
+{
+	int i;
+
+	i = ar[len / 2];
+	free(ar);
+	return (i);
+}

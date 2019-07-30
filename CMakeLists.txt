@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.14)
-project(Push_swap C)
+project(push_swap_v_2 C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(includes)
 include_directories(libft)
 
-add_executable(Push_swap
+add_executable(push_swap_v_2
         check/main.c
         includes/get_next_line.h
         includes/libft.h
@@ -75,12 +75,15 @@ add_executable(Push_swap
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
+        src/check.c
+        src/do_print.c
         src/get_next_line.c
         src/is_valid.c
         src/list_del.c
+        src/median_search.c
         src/print_func.c
-        src/check.c
+        src/push_swap.c
+        src/sort_funcs.c
         src/spr.c
         src/store_list.c
-        swap_push/main.c
-        swap_push/push_swap.c swap_push/sort_funcs.c swap_push/median_search.c swap_push/do_print.c)
+        swap_push/main.c src/normes.c src/sort_3_elem.c src/sort_3_elem2.c src/max_search.c src/len_search.c src/sort_check.c src/new_struct.c)

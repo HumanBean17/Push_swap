@@ -124,7 +124,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Push_swap
+CMAKE_PROJECT_NAME:STATIC=push_swap_v_2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -196,6 +196,12 @@ Push_swap_BINARY_DIR:STATIC=/home/humanbean/ecole42/push_swap_v_2/cmake-build-de
 
 //Value Computed by CMake
 Push_swap_SOURCE_DIR:STATIC=/home/humanbean/ecole42/push_swap_v_2
+
+//Value Computed by CMake
+push_swap_v_2_BINARY_DIR:STATIC=/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug
+
+//Value Computed by CMake
+push_swap_v_2_SOURCE_DIR:STATIC=/home/humanbean/ecole42/push_swap_v_2
 
 
 ########################

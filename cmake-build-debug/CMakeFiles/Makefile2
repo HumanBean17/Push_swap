@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/humanbean/ecole42/push_swap_v_2
 CMAKE_BINARY_DIR = /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/Push_swap.dir
+# Target rules for target CMakeFiles/push_swap_v_2.dir
 
 # All Build rule for target.
-CMakeFiles/Push_swap.dir/all:
-	$(MAKE) -f CMakeFiles/Push_swap.dir/build.make CMakeFiles/Push_swap.dir/depend
-	$(MAKE) -f CMakeFiles/Push_swap.dir/build.make CMakeFiles/Push_swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77 "Built target Push_swap"
-.PHONY : CMakeFiles/Push_swap.dir/all
+CMakeFiles/push_swap_v_2.dir/all:
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/depend
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84 "Built target push_swap_v_2"
+.PHONY : CMakeFiles/push_swap_v_2.dir/all
 
 # Include target in all.
-all: CMakeFiles/Push_swap.dir/all
+all: CMakeFiles/push_swap_v_2.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Push_swap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles 77
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Push_swap.dir/all
+CMakeFiles/push_swap_v_2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles 84
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/push_swap_v_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Push_swap.dir/rule
+.PHONY : CMakeFiles/push_swap_v_2.dir/rule
 
 # Convenience name for target.
-Push_swap: CMakeFiles/Push_swap.dir/rule
+push_swap_v_2: CMakeFiles/push_swap_v_2.dir/rule
 
-.PHONY : Push_swap
-
-# clean rule for target.
-CMakeFiles/Push_swap.dir/clean:
-	$(MAKE) -f CMakeFiles/Push_swap.dir/build.make CMakeFiles/Push_swap.dir/clean
-.PHONY : CMakeFiles/Push_swap.dir/clean
+.PHONY : push_swap_v_2
 
 # clean rule for target.
-clean: CMakeFiles/Push_swap.dir/clean
+CMakeFiles/push_swap_v_2.dir/clean:
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/clean
+.PHONY : CMakeFiles/push_swap_v_2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/push_swap_v_2.dir/clean
 
 .PHONY : clean
 
