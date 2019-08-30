@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_print.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 20:55:19 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 20:55:24 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    reverse_rotate_print(t_ar **a, t_ar **b, char *line)
+void	reverse_rotate_print(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, rra) && (*a))
 	{
@@ -20,7 +32,7 @@ void    reverse_rotate_print(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    rotate_print(t_ar **a, t_ar **b, char *line)
+void	rotate_print(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, ra) && (*a))
 	{
@@ -40,7 +52,7 @@ void    rotate_print(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    push_print(t_ar **a, t_ar **b, char *line)
+void	push_print(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, pa) && (*b))
 	{
@@ -56,7 +68,7 @@ void    push_print(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    swap_print(t_ar **a, t_ar **b, char *line)
+void	swap_print(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, sa) && (*a))
 	{

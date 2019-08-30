@@ -1,3 +1,3 @@
-/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles/push_swap_v_2.dir
-/home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles/push_swap_v_2.dir

@@ -15,6 +15,7 @@
 
 #include "get_next_line.h"
 #include <limits.h>
+#include "libftprintf.h"
 
 typedef struct  s_ar
 {
@@ -25,6 +26,7 @@ typedef struct  s_ar
 
 void    no_repeat(t_ar *a);
 void    sort_case6(t_ar **a);
+int 	sort_condition(t_ar *tmp, int flag);
 void    sort_case5(t_ar **a);
 void    less_three(t_ar *tmp, t_ar **a, t_ar **b);
 void    sort_case4(t_ar **a, t_ar **b);
@@ -79,6 +81,6 @@ int             rule_check(char *line);
 void print_list(t_ar *a, t_ar *b);
 void            print_exit(int flag);
 void    print_parts(t_ar *a, t_ar *b);
-t_ar            *store_list(int argc, char **argv);
+t_ar *store_list(int argc, char **argv, int flag);
 
 #endif

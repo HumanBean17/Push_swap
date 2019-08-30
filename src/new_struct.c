@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   new_struct.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:39:12 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 20:56:08 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-t_ar    *store_list(int argc, char **argv)
+t_ar	*store_list(int argc, char **argv, int flag)
 {
-	t_ar    *head;
-	int     num;
-	int     i;
+	t_ar	*head;
+	int		num;
+	int		i;
 
-	i = 1;
+	i = flag == 0 ? 1 : 2;
 	head = NULL;
 	while (i < argc)
 	{
@@ -18,7 +30,7 @@ t_ar    *store_list(int argc, char **argv)
 	return (head);
 }
 
-t_ar    *new_elem(int data)
+t_ar	*new_elem(int data)
 {
 	t_ar *tmp;
 

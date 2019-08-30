@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   spr.c                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:28:17 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:28:57 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    reverse_rotate(t_ar **a, t_ar **b, char *line)
+void	reverse_rotate(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, rra) && (*a))
 		shift_down(a);
-	else if (!ft_strcmp(line, rrb) && (*b)) {
+	else if (!ft_strcmp(line, rrb) && (*b))
 		shift_down(b);
-	}
 	else if (!ft_strcmp(line, rrr))
 	{
 		shift_down(a);
@@ -14,7 +25,7 @@ void    reverse_rotate(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    rotate(t_ar **a, t_ar **b, char *line)
+void	rotate(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, ra) && (*a))
 		shift_up(a);
@@ -27,7 +38,7 @@ void    rotate(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    push(t_ar **a, t_ar **b, char *line)
+void	push(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, pa) && (*b))
 	{
@@ -41,7 +52,7 @@ void    push(t_ar **a, t_ar **b, char *line)
 	}
 }
 
-void    swap(t_ar **a, t_ar **b, char *line)
+void	swap(t_ar **a, t_ar **b, char *line)
 {
 	if (!ft_strcmp(line, sa) && (*a))
 		do_swap(a);

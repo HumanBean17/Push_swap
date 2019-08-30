@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_del.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:41:22 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:41:29 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	delone(t_ar **begin, t_ar *to_del)
@@ -29,7 +41,7 @@ void	delone(t_ar **begin, t_ar *to_del)
 	}
 }
 
-int     iminlovewithnormes(int *ar, int len)
+int		iminlovewithnormes(int *ar, int len)
 {
 	int i;
 

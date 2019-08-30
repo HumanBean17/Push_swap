@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 19:35:13 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 20:14:21 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    no_repeat(t_ar *a)
+void	no_repeat(t_ar *a)
 {
 	t_ar *tmp;
 
@@ -17,15 +29,22 @@ void    no_repeat(t_ar *a)
 	}
 }
 
-void    check(int argc, char **argv)
+void	check(int argc, char **argv)
 {
-	char *line;
-	t_ar *a = NULL;
-	t_ar *b = NULL;
+	char	*line;
+	t_ar	*a;
+	t_ar	*b;
+	int		d;
 
-	a = store_list(argc, argv);
+	b = NULL;
+	d = 0;
+	if (argc >= 2 && ft_strequ(argv[1], "-c"))
+		d = 1;
+	a = store_list(argc, argv, d);
 	while (get_next_line(0, &line))
 	{
+		if (d == 1)
+			print_list(a, b);
 		rule_check(line);
 		operation_choose(&a, &b, line);
 		ft_strdel(&line);
@@ -36,7 +55,7 @@ void    check(int argc, char **argv)
 		print_exit(2);
 }
 
-void    operation_choose(t_ar **a, t_ar **b, char *line)
+void	operation_choose(t_ar **a, t_ar **b, char *line)
 {
 	if (find_letter(line, 's'))
 		swap(a, b, line);
@@ -50,7 +69,7 @@ void    operation_choose(t_ar **a, t_ar **b, char *line)
 		reverse_rotate(a, b, line);
 }
 
-int     find_letter(const char *line, char c)
+int		find_letter(const char *line, char c)
 {
 	int i;
 

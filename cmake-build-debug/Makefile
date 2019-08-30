@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Users/lcrawn/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Users/lcrawn/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/humanbean/ecole42/push_swap_v_2
+CMAKE_SOURCE_DIR = /Users/lcrawn/Push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lcrawn/Push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Users/lcrawn/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/humanbean/Desktop/clion-2019.1.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/Users/lcrawn/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles /Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/humanbean/ecole42/push_swap_v_2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/lcrawn/Push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -2256,6 +2256,33 @@ src/sort_check.c.s:
 	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/src/sort_check.c.s
 .PHONY : src/sort_check.c.s
 
+src/sort_conditions.o: src/sort_conditions.c.o
+
+.PHONY : src/sort_conditions.o
+
+# target to build an object file
+src/sort_conditions.c.o:
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/src/sort_conditions.c.o
+.PHONY : src/sort_conditions.c.o
+
+src/sort_conditions.i: src/sort_conditions.c.i
+
+.PHONY : src/sort_conditions.i
+
+# target to preprocess a source file
+src/sort_conditions.c.i:
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/src/sort_conditions.c.i
+.PHONY : src/sort_conditions.c.i
+
+src/sort_conditions.s: src/sort_conditions.c.s
+
+.PHONY : src/sort_conditions.s
+
+# target to generate assembly for a file
+src/sort_conditions.c.s:
+	$(MAKE) -f CMakeFiles/push_swap_v_2.dir/build.make CMakeFiles/push_swap_v_2.dir/src/sort_conditions.c.s
+.PHONY : src/sort_conditions.c.s
+
 src/sort_funcs.o: src/sort_funcs.c.o
 
 .PHONY : src/sort_funcs.o
@@ -2371,8 +2398,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... push_swap_v_2"
 	@echo "... edit_cache"
+	@echo "... push_swap_v_2"
 	@echo "... check/main.o"
 	@echo "... check/main.i"
 	@echo "... check/main.s"
@@ -2610,6 +2637,9 @@ help:
 	@echo "... src/sort_check.o"
 	@echo "... src/sort_check.i"
 	@echo "... src/sort_check.s"
+	@echo "... src/sort_conditions.o"
+	@echo "... src/sort_conditions.i"
+	@echo "... src/sort_conditions.s"
 	@echo "... src/sort_funcs.o"
 	@echo "... src/sort_funcs.i"
 	@echo "... src/sort_funcs.s"

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   max_search.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:40:39 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:40:44 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-static void    max_case_1(t_ar *a, long int *max1, long int *max2,
+static void		max_case_1(t_ar *a, long int *max1, long int *max2,
 		long int *max3)
 {
 	*max3 = *max2;
@@ -8,19 +20,19 @@ static void    max_case_1(t_ar *a, long int *max1, long int *max2,
 	*max1 = a->num;
 }
 
-static void    max_case_2(t_ar *a, long int *max2,
+static void		max_case_2(t_ar *a, long int *max2,
 		long int *max3)
 {
 	*max3 = *max2;
 	*max2 = a->num;
 }
 
-int     max_search(t_ar *a)
+int				max_search(t_ar *a)
 {
-	int         i;
-	long int    max1;
-	long int    max2;
-	long int    max3;
+	int			i;
+	long int	max1;
+	long int	max2;
+	long int	max3;
 
 	i = 0;
 	max1 = (long int)(INT_MIN) - 2;

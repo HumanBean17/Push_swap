@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:37:08 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 19:40:44 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    sort(int argc, char **argv)
+void	sort(int argc, char **argv)
 {
-	t_ar    *a;
-	t_ar    *b;
-	int     len;
+	t_ar	*a;
+	t_ar	*b;
+	int		len;
 
 	b = NULL;
-	a = store_list(argc, argv);
+	a = store_list(argc, argv, 0);
 	if (sort_check(a))
 		print_exit(69);
 	len = stack_len(a);

@@ -82,6 +82,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap_v_2.dir/src/len_search.c.o"
   "CMakeFiles/push_swap_v_2.dir/src/sort_check.c.o"
   "CMakeFiles/push_swap_v_2.dir/src/new_struct.c.o"
+  "CMakeFiles/push_swap_v_2.dir/src/sort_conditions.c.o"
   "push_swap_v_2.pdb"
   "push_swap_v_2"
 )

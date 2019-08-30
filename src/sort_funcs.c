@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_funcs.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:18:48 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:26:32 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    till_sort(t_ar **a, t_ar **b, int pushed, int *left)
+void	till_sort(t_ar **a, t_ar **b, int pushed, int *left)
 {
 	int flag;
 	int median;
@@ -11,9 +23,9 @@ void    till_sort(t_ar **a, t_ar **b, int pushed, int *left)
 	count = 0;
 	max3 = max_search(*a);
 	median = median_search2(*a);
-	while ((pushed - *left > 3 && (*a)->pos == 0) || ((*a)->pos == 0 && flag == 0))
-		if (partition_len(*b) < 3 && partition_len(*a) == 1 &&
-		    (*a)->num < max3)
+	while ((pushed - *left > 3 && (*a)->pos == 0)
+	|| ((*a)->pos == 0 && flag == 0))
+		if (partition_len(*b) < 3 && partition_len(*a) == 1 && (*a)->num < max3)
 			till_sort_case1(a, b, left);
 		else if (go_back(*a, median) && (*a)->num >= median && count > 0)
 			till_sort_case2(a, b, &count);
@@ -24,12 +36,12 @@ void    till_sort(t_ar **a, t_ar **b, int pushed, int *left)
 		else if (partition_len(*a) > 3)
 			median = till_sort_case5(a, b, &flag);
 		else
-			break;
+			break ;
 	while (count--)
 		reverse_rotate_print(a, b, rra);
 }
 
-void    push_it_to_the_limit(t_ar **a, t_ar **b)
+void	push_it_to_the_limit(t_ar **a, t_ar **b)
 {
 	int pushed;
 	int left;
@@ -57,11 +69,11 @@ void    push_it_to_the_limit(t_ar **a, t_ar **b)
 		(*b)->pos = 0;
 }
 
-void    push_till_3(t_ar **a, t_ar **b)
+void	push_till_3(t_ar **a, t_ar **b)
 {
-	int     len;
-	int     pushed;
-	int     median;
+	int	len;
+	int	pushed;
+	int	median;
 
 	len = stack_len(*a);
 	pushed = 0;
@@ -83,7 +95,7 @@ void    push_till_3(t_ar **a, t_ar **b)
 	(*a)->pos = 1;
 }
 
-void    sort_push(t_ar **a, t_ar **b)
+void	sort_push(t_ar **a, t_ar **b)
 {
 	t_ar *tmp;
 
@@ -98,24 +110,22 @@ void    sort_push(t_ar **a, t_ar **b)
 		(*a)->pos = 1;
 		return ;
 	}
-	else if (tmp->num > tmp->next->num && tmp->next->num > tmp->next->next->num)
+	else if (sort_condition(tmp, 1))
 		sort_case1(a, b);
-	else if (tmp->num > tmp->next->num && tmp->next->num < tmp->next->next->num &&
-	tmp->num < tmp->next->next->num)
+	else if (sort_condition(tmp, 2))
 		swap_print(a, b, sa);
-	else if (tmp->num < tmp->next->num && tmp->next->num > tmp->next->next->num &&
-	tmp->num > tmp->next->next->num)
+	else if (sort_condition(tmp, 3))
 		sort_case2(a, b);
-	else if (tmp->num < tmp->next->num && tmp->next->num > tmp->next->next->num)
+	else if (sort_condition(tmp, 4))
 		sort_case3(a, b);
-	else if (tmp->num > tmp->next->num && tmp->next->num < tmp->next->next->num)
+	else if (sort_condition(tmp, 5))
 		sort_case4(a, b);
 	(*a)->pos = 1;
 }
 
-void    sort_part_a(t_ar **a)
+void	sort_part_a(t_ar **a)
 {
-	t_ar    *tmp;
+	t_ar	*tmp;
 
 	if (!three_elem_sorted(a))
 		return ;

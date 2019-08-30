@@ -86,4 +86,4 @@ add_executable(push_swap_v_2
         src/sort_funcs.c
         src/spr.c
         src/store_list.c
-        swap_push/main.c src/normes.c src/sort_3_elem.c src/sort_3_elem2.c src/max_search.c src/len_search.c src/sort_check.c src/new_struct.c)
+        swap_push/main.c src/normes.c src/sort_3_elem.c src/sort_3_elem2.c src/max_search.c src/len_search.c src/sort_check.c src/new_struct.c src/sort_conditions.c)

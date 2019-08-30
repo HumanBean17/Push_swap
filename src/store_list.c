@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   store_list.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:29:28 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:29:32 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    shift_down(t_ar **a)
+void	shift_down(t_ar **a)
 {
 	t_ar *tmp;
 	t_ar *head;
@@ -25,11 +37,10 @@ void    shift_down(t_ar **a)
 		(*a)->next->next = NULL;
 }
 
-void    shift_up(t_ar **a)
+void	shift_up(t_ar **a)
 {
 	t_ar *tmp;
 	t_ar *head;
-	t_ar *cur;
 
 	if (!(*a))
 		return ;
@@ -44,7 +55,7 @@ void    shift_up(t_ar **a)
 	(*a) = head;
 }
 
-void    do_swap(t_ar **alst)
+void	do_swap(t_ar **alst)
 {
 	t_ar *first;
 	t_ar *second;
@@ -60,7 +71,7 @@ void    do_swap(t_ar **alst)
 	(*alst) = second;
 }
 
-void    push_front(t_ar **alst, int data)
+void	push_front(t_ar **alst, int data)
 {
 	t_ar *tmp;
 
@@ -74,7 +85,7 @@ void    push_front(t_ar **alst, int data)
 	(*alst) = tmp;
 }
 
-void    push_back(t_ar **alst, int data)
+void	push_back(t_ar **alst, int data)
 {
 	t_ar *tmp;
 

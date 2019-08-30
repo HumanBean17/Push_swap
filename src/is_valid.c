@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   is_valid.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:42:23 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 20:34:12 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int    num_check(char *line)
+int	num_check(char *line)
 {
 	long int num;
 
 	if (line[0] == '-' && line[1] != '0' && (num = ft_atoi(line)) == 0)
-			print_exit(0);
+		print_exit(0);
 	else if (line[0] != '0' && (num = ft_atoi(line)) == 0)
-			print_exit(0);
+		print_exit(0);
 	num = ft_atoi(line);
 	return ((int)num);
 }
 
-int     rule_check(char *line)
+int	rule_check(char *line)
 {
 	if (!ft_strcmp(line, sa) || !ft_strcmp(line, sb) ||
 	!ft_strcmp(line, ss) || !ft_strcmp(line, pa) ||

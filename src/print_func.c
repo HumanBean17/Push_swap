@@ -1,41 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_func.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:38:24 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 19:55:28 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-void    print_exit(int flag)
+void	print_exit(int flag)
 {
 	if (flag == 0)
-		ft_putstr("Error\n");
+		ft_putstr("\x1b[31mError\x1b[0m\n");
 	else if (flag == 1)
-		ft_putstr("OK\n");
+		ft_putstr("\x1b[32mOK\x1b[0m\n");
 	else if (flag == 2)
-		ft_putstr("KO\n");
+		ft_putstr("\x1b[31mKO\x1b[0m\n");
 	exit(0);
 }
 
-void    print_parts(t_ar *a, t_ar *b)
+void	print_parts(t_ar *a, t_ar *b)
 {
-	printf("-------------------------\n");
+	ft_putstr("-------------------------\n");
 	while (b)
 	{
 		if (b->pos == 0)
-			printf("%d ", b->num);
+			ft_printf("%d ", b->num);
 		else
-			printf("|| %d ", b->num);
+			ft_printf("|| %d ", b->num);
 		b = b->next;
 	}
-	printf("\n++++++++++++++++++++++++++\n");
+	ft_putstr("\n++++++++++++++++++++++++++\n");
 	while (a)
 	{
 		if (a->pos == 0)
-			printf("%d ", a->num);
+			ft_printf("%d ", a->num);
 		else
-			printf("|| %d ", a->num);
+			ft_printf("|| %d ", a->num);
 		a = a->next;
 	}
-	printf("\n");
-	printf("-------------------------\n");
+	write(1, "\n", 1);
 }
 
-int     part_check(t_ar *a)
+int		part_check(t_ar *a)
 {
 	int index;
 	int i;
@@ -52,23 +63,23 @@ int     part_check(t_ar *a)
 	return (index);
 }
 
-void print_list(t_ar *a, t_ar *b)
+void	print_list(t_ar *a, t_ar *b)
 {
-	printf("-------------------------\n");
+	ft_printf("%s-------------------------%s\n", YELLOW, ESCAPE);
 	while (a || b)
 	{
 		if (a)
-			printf("%-5d", a->num);
+			ft_printf("%s%-5d%s", GREEN, a->num, ESCAPE);
 		else
-			printf("     ");
+			ft_putstr("     ");
 		if (b)
-			printf("%d\n", b->num);
+			ft_printf("%s%d%s\n", RED, b->num, ESCAPE);
 		else
-			printf("\n");
+			write(1, "\n", 1);
 		if (b)
 			b = b->next;
 		if (a)
 			a = a->next;
 	}
-	printf("\n");
+	write(1, "\n", 1);
 }

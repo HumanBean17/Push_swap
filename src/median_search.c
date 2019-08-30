@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   median_search.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/30 18:39:44 by lcrawn            #+#    #+#             */
+/*   Updated: 2019/08/30 18:39:49 by lcrawn           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-int     go_back(t_ar *a, int median)
+int		go_back(t_ar *a, int median)
 {
 	while (a && a->pos == 0)
 		a = a->next;
@@ -13,7 +25,7 @@ int     go_back(t_ar *a, int median)
 	return (0);
 }
 
-int     is_lower_med(t_ar *a, int med)
+int		is_lower_med(t_ar *a, int med)
 {
 	while (a && a->pos == 0)
 	{
@@ -24,7 +36,7 @@ int     is_lower_med(t_ar *a, int med)
 	return (0);
 }
 
-int     *list_cpy(t_ar *a)
+int		*list_cpy(t_ar *a)
 {
 	int *m;
 	int i;
@@ -40,7 +52,7 @@ int     *list_cpy(t_ar *a)
 	return (m);
 }
 
-int     median_search2(t_ar *a)
+int		median_search2(t_ar *a)
 {
 	int *ar;
 	int len;
@@ -69,7 +81,7 @@ int     median_search2(t_ar *a)
 	return (iminlovewithnormes(ar, len));
 }
 
-int     median_search(t_ar *a)
+int		median_search(t_ar *a)
 {
 	int *ar;
 	int len;
