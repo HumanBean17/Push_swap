@@ -118,6 +118,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/src/spr.c.o"
   "CMakeFiles/test.dir/src/store_list.c.o"
   "CMakeFiles/test.dir/swap_push/swap_push.c.o"
+  "CMakeFiles/test.dir/src/argv_func.c.o"
   "test.pdb"
   "test"
 )

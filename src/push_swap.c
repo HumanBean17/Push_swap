@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 18:37:08 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/08/30 19:40:44 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 16:15:37 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	sort(int argc, char **argv)
 	g_printshift = CheckOpts(argv);
 	argv = ArgvSplit(&argc, argv);
 	a = store_list(argc, argv);
+	ArgvDel(argv);
 	if (sort_check(a))
 		print_exit(69);
 	len = stack_len(a);
@@ -29,4 +30,5 @@ void	sort(int argc, char **argv)
 	sort_part_a(&a);
 	while (stack_len(a) != len)
 		push_it_to_the_limit(&a, &b);
+	list_del(&a);
 }

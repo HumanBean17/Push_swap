@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 20:53:23 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/08/30 20:53:32 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 16:14:57 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	main(int argc, char **argv)
 	g_pushswap = 1;
 	if (argc == 1)
 		print_exit(69);
-
 	sort(argc, argv);
 	print_exit(69);
 }

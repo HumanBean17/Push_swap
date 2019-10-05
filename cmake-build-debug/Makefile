@@ -2796,6 +2796,33 @@ libftprintf/ft_strupper.c.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/libftprintf/ft_strupper.c.s
 .PHONY : libftprintf/ft_strupper.c.s
 
+src/argv_func.o: src/argv_func.c.o
+
+.PHONY : src/argv_func.o
+
+# target to build an object file
+src/argv_func.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/argv_func.c.o
+.PHONY : src/argv_func.c.o
+
+src/argv_func.i: src/argv_func.c.i
+
+.PHONY : src/argv_func.i
+
+# target to preprocess a source file
+src/argv_func.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/argv_func.c.i
+.PHONY : src/argv_func.c.i
+
+src/argv_func.s: src/argv_func.c.s
+
+.PHONY : src/argv_func.s
+
+# target to generate assembly for a file
+src/argv_func.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/argv_func.c.s
+.PHONY : src/argv_func.c.s
+
 src/check.o: src/check.c.o
 
 .PHONY : src/check.o
@@ -3642,6 +3669,9 @@ help:
 	@echo "... libftprintf/ft_strupper.o"
 	@echo "... libftprintf/ft_strupper.i"
 	@echo "... libftprintf/ft_strupper.s"
+	@echo "... src/argv_func.o"
+	@echo "... src/argv_func.i"
+	@echo "... src/argv_func.s"
 	@echo "... src/check.o"
 	@echo "... src/check.i"
 	@echo "... src/check.s"

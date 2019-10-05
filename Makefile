@@ -16,7 +16,8 @@ COMMON_SRC = src/check.c \
             src/push_swap.c       \
             src/sort_3_elem2.c     \
             src/sort_conditions.c   \
-            src/spr.c
+            src/spr.c \
+            src/argv_func.c
 
 CHECKER_SRC = check/main.c
 
@@ -38,7 +39,8 @@ COMMON_OBJ = ./check.o \
                sort_conditions.o \
                sort_funcs.o \
                spr.o \
-               store_list.o
+               store_list.o \
+               argv_func.o
 
 
 CHECKER_OBJ = ./main.o

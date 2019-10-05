@@ -401,6 +401,9 @@
 		<Unit filename="/Users/lcrawn/test/libftprintf/libftprintf.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="/Users/lcrawn/test/src/argv_func.c">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="/Users/lcrawn/test/src/check.c">
 			<Option target="test"/>
 		</Unit>

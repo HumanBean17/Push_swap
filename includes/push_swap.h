@@ -29,6 +29,8 @@ typedef struct  s_ar
 }               t_ar;
 
 int 	CheckOpts(char **argv);
+void	list_del(t_ar **head);
+void	ArgvDel(char **argv);
 char 	**ArgvSplit(int *argc, char **argv);
 void    no_repeat(t_ar *a);
 void    sort_case6(t_ar **a);

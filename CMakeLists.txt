@@ -132,4 +132,4 @@ add_executable(test
         src/sort_funcs.c
         src/spr.c
         src/store_list.c
-        swap_push/swap_push.c)
+        swap_push/swap_push.c src/argv_func.c)
