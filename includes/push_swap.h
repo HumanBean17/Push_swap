@@ -17,6 +17,10 @@
 #include <limits.h>
 #include "libftprintf.h"
 
+int g_pushswap;
+int g_checker;
+int g_printshift;
+
 typedef struct  s_ar
 {
 	int         num;
@@ -24,6 +28,8 @@ typedef struct  s_ar
 	struct s_ar *next;
 }               t_ar;
 
+int 	CheckOpts(char **argv);
+char 	**ArgvSplit(int *argc, char **argv);
 void    no_repeat(t_ar *a);
 void    sort_case6(t_ar **a);
 int 	sort_condition(t_ar *tmp, int flag);
@@ -81,6 +87,6 @@ int             rule_check(char *line);
 void print_list(t_ar *a, t_ar *b);
 void            print_exit(int flag);
 void    print_parts(t_ar *a, t_ar *b);
-t_ar *store_list(int argc, char **argv, int flag);
+t_ar *store_list(int argc, char **argv);
 
 #endif

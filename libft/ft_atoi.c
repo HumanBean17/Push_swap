@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/09 18:38:00 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/04/11 19:02:07 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:57:55 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int		ft_atoi(const char *str)
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		c = (c * 10) + ((int)str[i++] - 48);
-		if (c >= INT_MAX && flag == 1)
+		if (c > 2147483647 && flag == 1)
 			return (0);
-		if (c > INT_MAX && flag == -1)
+		if (c > 2147483648 && flag == -1)
 			return (0);
 	}
 	return (c * (unsigned long int)flag);

@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 18:42:23 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/08/30 20:34:12 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:56:59 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,20 @@
 
 int	num_check(char *line)
 {
-	long int num;
+	long int 	num;
+	int 		i;
 
-	if (line[0] == '-' && line[1] != '0' && (num = ft_atoi(line)) == 0)
+	i = 0;
+	while (line[i])
+	{
+		if ((line[i] < '0' || line[i] > '9') &&
+				(line[i] != '-' && line[i] != '+'))
+			print_exit(0);
+		i++;
+	}
+	if (line[0] == '-' && line[1] != '0' && !ft_atoi(line))
 		print_exit(0);
-	else if (line[0] != '0' && (num = ft_atoi(line)) == 0)
+	else if (line[0] != '0' && !ft_atoi(line))
 		print_exit(0);
 	num = ft_atoi(line);
 	return ((int)num);

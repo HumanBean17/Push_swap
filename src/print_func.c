@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 18:38:24 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/08/30 19:55:28 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:50:10 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,10 @@ int		part_check(t_ar *a)
 	return (index);
 }
 
-void	print_list(t_ar *a, t_ar *b)
+void print_list(t_ar *a, t_ar *b)
 {
+	if (g_printshift != 2)
+		return ;
 	ft_printf("%s-------------------------%s\n", YELLOW, ESCAPE);
 	while (a || b)
 	{

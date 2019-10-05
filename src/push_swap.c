@@ -19,7 +19,9 @@ void	sort(int argc, char **argv)
 	int		len;
 
 	b = NULL;
-	a = store_list(argc, argv, 0);
+	g_printshift = CheckOpts(argv);
+	argv = ArgvSplit(&argc, argv);
+	a = store_list(argc, argv);
 	if (sort_check(a))
 		print_exit(69);
 	len = stack_len(a);

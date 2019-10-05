@@ -1,15 +1,17 @@
 cmake_minimum_required(VERSION 3.14)
-project(push_swap_v_2 C)
+project(test C)
 
 set(CMAKE_C_STANDARD 11)
 
 include_directories(includes)
 include_directories(libft)
+include_directories(libftprintf)
 
-add_executable(push_swap_v_2
+add_executable(test
         check/main.c
         includes/get_next_line.h
         includes/libft.h
+        includes/libftprintf.h
         includes/push_swap.h
         libft/ft_atoi.c
         libft/ft_bzero.c
@@ -75,15 +77,59 @@ add_executable(push_swap_v_2
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
+        libftprintf/ft_atoi.c
+        libftprintf/ft_atoi_base.c
+        libftprintf/ft_check.c
+        libftprintf/ft_check_2.c
+        libftprintf/ft_conditions.c
+        libftprintf/ft_cpy.c
+        libftprintf/ft_flag_funcs.c
+        libftprintf/ft_info.c
+        libftprintf/ft_isdigit.c
+        libftprintf/ft_longarifm.c
+        libftprintf/ft_longarifm_2.c
+        libftprintf/ft_longarifm_3.c
+        libftprintf/ft_memalloc.c
+        libftprintf/ft_memset.c
+        libftprintf/ft_pows.c
+        libftprintf/ft_printf.c
+        libftprintf/ft_printf_del.c
+        libftprintf/ft_printf_list_func.c
+        libftprintf/ft_printf_list_func_2.c
+        libftprintf/ft_put_adress.c
+        libftprintf/ft_put_float.c
+        libftprintf/ft_put_int.c
+        libftprintf/ft_put_unsigned.c
+        libftprintf/ft_putchar.c
+        libftprintf/ft_putnbr.c
+        libftprintf/ft_putstr.c
+        libftprintf/ft_return_flags.c
+        libftprintf/ft_return_num.c
+        libftprintf/ft_round_dioux.c
+        libftprintf/ft_strdup.c
+        libftprintf/ft_strjoin.c
+        libftprintf/ft_strlen.c
+        libftprintf/ft_strnew.c
+        libftprintf/ft_strrev.c
+        libftprintf/ft_strupper.c
+        libftprintf/libftprintf.h
         src/check.c
         src/do_print.c
         src/get_next_line.c
         src/is_valid.c
+        src/len_search.c
         src/list_del.c
+        src/max_search.c
         src/median_search.c
+        src/new_struct.c
+        src/normes.c
         src/print_func.c
         src/push_swap.c
+        src/sort_3_elem.c
+        src/sort_3_elem2.c
+        src/sort_check.c
+        src/sort_conditions.c
         src/sort_funcs.c
         src/spr.c
         src/store_list.c
-        swap_push/main.c src/normes.c src/sort_3_elem.c src/sort_3_elem2.c src/max_search.c src/len_search.c src/sort_check.c src/new_struct.c src/sort_conditions.c)
+        swap_push/swap_push.c)

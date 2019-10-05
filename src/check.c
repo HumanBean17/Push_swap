@@ -6,7 +6,7 @@
 /*   By: lcrawn <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 19:35:13 by lcrawn            #+#    #+#             */
-/*   Updated: 2019/08/30 20:14:21 by lcrawn           ###   ########.fr       */
+/*   Updated: 2019/10/05 15:22:31 by lcrawn           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,32 @@ void	no_repeat(t_ar *a)
 	}
 }
 
+int 	CheckOpts(char **argv)
+{
+	if (ft_strequ(argv[1], "-c") && g_checker)
+		return (2);
+	return (1);
+}
+
 void	check(int argc, char **argv)
 {
 	char	*line;
 	t_ar	*a;
 	t_ar	*b;
-	int		d;
 
 	b = NULL;
-	d = 0;
-	if (argc >= 2 && ft_strequ(argv[1], "-c"))
-		d = 1;
-	a = store_list(argc, argv, d);
-	while (get_next_line(0, &line))
+	g_printshift = CheckOpts(argv);
+	argv = ArgvSplit(&argc, argv);
+	a = store_list(argc, argv);
+	print_list(a, b);
+	while (get_next_line(STDIN_FILENO, &line))
 	{
-		if (d == 1)
-			print_list(a, b);
 		rule_check(line);
 		operation_choose(&a, &b, line);
 		ft_strdel(&line);
+		print_list(a, b);
 	}
+	print_list(a, b);
 	if (b == NULL && sort_check(a) == 1)
 		print_exit(1);
 	else
